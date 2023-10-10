@@ -1,1 +1,39 @@
+body{
+    background-color: beige;
+}
+.card {
+    background-color: rgb(116, 238, 197);
+    height: 10em;
+    width: 7em;
+    border-radius: 20px;
+   
 
+}
+.scoresButton{
+    display: flex;
+    justify-content: space-around;
+}
+.currentScore{
+    background-color: rgb(226, 226, 236);
+    border-color: rgb(226, 226, 236);
+    border-radius: 10px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.bestScore{
+    background-color: rgb(225, 241, 186);
+    border-color: rgb(225, 241, 186);
+    border-radius: 10px;
+    font-size: 15px;
+
+}
+img{
+    width: 100px;
+}
+.cardImages{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}

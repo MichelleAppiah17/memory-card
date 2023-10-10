@@ -7,8 +7,8 @@ export default function GameHeader() {
         <h1>MEMORY CARD GAME</h1>
       </div>
       <div className='scoresButton'>
-        <button>Current score: 0</button>
-        <button>Best score: 0</button>
+        <button className='currentScore'>Current score: 0</button>
+        <button className='bestScore'>Best score: 0</button>
       </div> 
     </div>
   )
