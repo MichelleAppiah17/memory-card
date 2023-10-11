@@ -135,7 +135,7 @@ export const PokemonData = [
   {
     name: "Electrike",
     id: 23,
-    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/44.svg",
+    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/309.svg",
     isActive: false,
   },
   {
