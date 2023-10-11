@@ -1,8 +1,8 @@
 import React from "react";
 
-const Card = ({ imageUrl,name }) => {
+const Card = ({ imageUrl, id, name, onClick}) => {
   return (
-    <div className="card">
+    <div className="card" onClick={() => onClick(id)}>
       <img src={imageUrl} alt={name} />
       <h4>{name}</h4>
     </div>
@@ -10,5 +10,7 @@ const Card = ({ imageUrl,name }) => {
 };
 
 export default Card;
+
+
 
 
