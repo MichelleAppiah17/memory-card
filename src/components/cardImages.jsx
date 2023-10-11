@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from "./GameCards";
 import { PokemonData } from "./imagesUrl";
-import GameHeader from './GameHeader';
+import {GameHeader} from './gameHeader';
 
 export default function CardImages() {
   const [activeCards, setActiveCards] = useState([]);
