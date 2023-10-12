@@ -9,9 +9,9 @@ export default function GameHeader({ currentScore, gameOver, bestScore, onPlayAg
       <div className='scoresButton'>
         <button className='currentScore'>Current score: {currentScore}</button>
         {gameOver ? (
-          <div>
+          <div className='gameOverDiv'>
             <p>GAME OVER</p>
-            <button onClick={onPlayAgainClick}>Play Again</button>
+            <button className="playAgainBtn" onClick={onPlayAgainClick}>Play Again</button>
           </div>
         ) : null}
         <button className='bestScore'>Best score: {bestScore}</button>

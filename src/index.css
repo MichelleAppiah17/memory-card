@@ -71,3 +71,9 @@ h4 {
 h1 {
     font-weight: bold;
 }
+.playAgainBtn{
+    background-color: #00ffff;
+    border-color: aqua;
+    border-radius: 5px;
+    height: 40px;
+}
