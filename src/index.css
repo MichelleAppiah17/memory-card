@@ -1,41 +1,73 @@
-body{
-    background-color: rgb(247, 247, 181);
+body {
+    background-color: #cce6ff;
 }
+
 .card {
-    background-color: rgb(116, 238, 197);
-    height: 10em;
-    width: 7em;
+    background-color: #b1c2a6;
+    height: 12em;
+    width: 10em;
     border-radius: 20px;
-   transition: transform 0.5s;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
-.card-clicked{
-    transform: rotateY(180deg);
-}
-.scoresButton{
+
+.scoresButton {
     display: flex;
     justify-content: space-around;
 }
-.currentScore{
-    background-color: rgb(226, 226, 236);
-    border-color: rgb(226, 226, 236);
+
+.currentScore {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(7, 7, 8);
     border-radius: 10px;
     height: 50px;
     font-size: 15px;
     font-weight: bold;
 }
-.bestScore{
-    background-color: rgb(225, 241, 186);
-    border-color: rgb(225, 241, 186);
-    border-radius: 10px;
-    font-size: 15px;
 
+.bestScore {
+    background-color: rgb(197, 189, 231);
+    border-color: rgb(17, 13, 13);
+    border-radius: 10px;
+    font-size: 16px;
 }
-img{
+
+img {
     width: 100px;
 }
-.cardImages{
+
+.cardImages {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 40px;
+}
+
+.cardTextSection {
+    height: 2em;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.cardImageSection {
+    display: flex;
+    height: 8em;
+    align-items: center;
+    justify-content: center;
+    margin: 1em
+}
+
+h1,
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    color: #003b5e;
+}
+
+h1 {
+    font-weight: bold;
 }

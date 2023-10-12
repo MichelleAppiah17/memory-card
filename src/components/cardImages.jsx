@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from "./GameCards";
-import { PokemonData } from "./imagesUrl";
+import { Pokemons } from "../data/pokemonData";
 import GameHeader from './gameHeader';
 
 export default function CardImages() {
@@ -9,6 +9,7 @@ export default function CardImages() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [usedGameIds, setUsedGameIds] = useState([])
 
   useEffect(() => {
     shuffleAndSetCards();
@@ -19,27 +20,32 @@ export default function CardImages() {
       return;
     }
 
-      const shuffledData = [...PokemonData].sort(() => Math.random() - 0.5);
+    const shuffledData = [...Pokemons].sort(() => Math.random() - 0.5);
     setActiveCards(shuffledData.slice(0, 5));
   };
 
-  const handleCardClick = (id) => {
+  const handleCardClick = (id, name) => {
     if (gameOver) {
       return;
     }
 
-    if (id === clickedCardId) {
+    if (usedGameIds.includes(id)) {
       setGameOver(true);
       console.log("GAME OVER");
       if (currentScore > bestScore) {
         setBestScore(currentScore);
       }
       setCurrentScore(0);
-    } else {
+    } 
+    
+    if (usedGameIds.includes(id) !== true){
       setClickedCardId(id);
       setCurrentScore(currentScore + 1);
+
+      usedGameIds.push(id);
+
       shuffleAndSetCards();
-      console.log(`Clicked on card with ID: ${id}`);
+      console.log(`${name}`);
     }
   }
 
@@ -52,7 +58,7 @@ export default function CardImages() {
             key={index}
             imageUrl={card.imageUrl}
             name={card.name}
-            onClick={() => handleCardClick(card.id)}
+            onClick={() => handleCardClick(card.id, card.name)}
             isClicked={clickedCardId === card.id}
           />
         ))}
