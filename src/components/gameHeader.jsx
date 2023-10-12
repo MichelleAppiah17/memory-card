@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function GameHeader({ currentScore,gameOver,bestScore }) {
+export default function GameHeader({ currentScore, gameOver, bestScore, onPlayAgainClick }) {
   return (
     <div>
       <div className='mainHeading'>
@@ -8,11 +8,16 @@ export default function GameHeader({ currentScore,gameOver,bestScore }) {
       </div>
       <div className='scoresButton'>
         <button className='currentScore'>Current score: {currentScore}</button>
-        {gameOver && <p>GAME OVER</p>}
+        {gameOver ? (
+          <div>
+            <p>GAME OVER</p>
+            <button onClick={onPlayAgainClick}>Play Again</button>
+          </div>
+        ) : null}
         <button className='bestScore'>Best score: {bestScore}</button>
-        
       </div>
     </div>
   );
 }
+
 

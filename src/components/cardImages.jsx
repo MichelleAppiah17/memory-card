@@ -48,10 +48,18 @@ export default function CardImages() {
       console.log(`${name}`);
     }
   }
+  
+  const handlePlayAgainClick = () => {
+  setGameOver(false);
+  setCurrentScore(0);
+  setUsedGameIds([]);
+  setClickedCardId(null);
+  shuffleAndSetCards();
+ };
 
   return (
     <div>
-      <GameHeader currentScore={currentScore} bestScore={bestScore} gameOver={gameOver} />
+      <GameHeader currentScore={currentScore} bestScore={bestScore} gameOver={gameOver} onPlayAgainClick={() => handlePlayAgainClick()} />
       <div className="cardImages">
         {activeCards.map((card, index) => (
           <Card
